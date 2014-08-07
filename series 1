@@ -1,0 +1,21 @@
+Enter file contents here// suma de mumeros.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+
+void main()
+{int suma,i,n;
+printf("ingrese un numero");
+scanf("%d",&n);
+suma=0;
+i=1;
+while(i<=n)
+{ suma=suma+i;
+  i=i+2;
+}
+printf ("la suma es %d",suma);
+getch();
+}
