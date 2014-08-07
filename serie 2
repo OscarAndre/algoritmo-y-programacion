@@ -1,0 +1,21 @@
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+
+void main()
+{int suma,i,n,p;
+printf("ingrese un numero");
+scanf("%d",&n);
+suma=0;
+i=1;
+p=1;
+while(p<=n)
+{ suma=suma+i;
+  i=i+2;
+  p=p+1;
+}
+printf ("la suma es %d",suma);
+getch();
+}
