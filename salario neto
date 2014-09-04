@@ -1,0 +1,49 @@
+// salario neto.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+
+using namespace std;
+
+void ejercicio(int salarioBruto, char nombre[],int &i, int &c){
+
+	
+
+	char vecnombre[30];
+	int   vecIva[30], vecAfp[30], vecSalarioneto[30];
+
+	vecAfp[i] = salarioBruto * 0.12;
+    vecIva[i] = salarioBruto * 0.065;
+    cout << "nro " << "   Nombre "  << " Afp " << " IVA " << " Salario Neto " << endl;
+    vecSalarioneto[i] = salarioBruto - vecAfp[i] - vecIva[i];
+    cout << endl << c << " " << strcpy(vecnombre, nombre) << " " << vecAfp[i] << " " << vecIva[i] << " " 
+
+		<< vecSalarioneto[i] << " "<<endl;
+	}
+
+
+void main(){
+
+	char nombre[30];
+    int i=0,c=1,n;
+    float SalarioBruto;
+    cout << "ingrese el numero de trabajadores:";
+    cin >> n;
+	do{
+        cout << "Ingrese el nombre del trabajador:";
+		do{
+           cin >> nombre;
+		} while (strlen(nombre)==0);
+		cout << "ingrese el salario bruto del trabajador:";
+		cin >> SalarioBruto;
+		i++;
+		ejercicio(SalarioBruto, nombre, i,c);
+	} while (i < n);
+
+	_getch();
+
+}
+
